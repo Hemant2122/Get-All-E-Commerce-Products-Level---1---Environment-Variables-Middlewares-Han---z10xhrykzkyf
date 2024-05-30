@@ -12,7 +12,7 @@ app.use(express.json());
 // Endpoint - /api/v1/products
 
 app.get("/api/v1/products", (req, res) => {
-    if(products === products.length){
+    if(products && products.length){
         res.statusCode = 200;
         const output = {
             status: "success", 
